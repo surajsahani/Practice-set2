@@ -12,11 +12,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        int raspberryPrice = 5;
-        display1("1 box: $" + raspberryPrice);
-        raspberryPrice = 10;
-        display2("2 boxes: $" + (raspberryPrice));
-        display3("3 boxes: $" + (raspberryPrice * 3));
+        int day1 = 15;
+        int day2 = 22;
+        int day3 = 18;
+        display(             (day1 + day2 + day3)     / 3);
 
     }
 
@@ -25,27 +24,11 @@ public class MainActivity extends AppCompatActivity {
      * how these work yet. We'll be covering them in lesson 3.
      */
 
-    public void display(String text) {
-        TextView t = (TextView) findViewById(R.id.);
-        t.setText(text);
-    }
+
 
     public void display(int text) {
         TextView t = (TextView) findViewById(R.id.display_text_view);
         t.setText(text + "");
     }
 
-    public void display1(String text) {
-        display(text);
-    }
-
-    public void display2(String text) {
-        TextView t = (TextView) findViewById(R.id.display_text_view_2);
-        t.setText(text);
-    }
-
-    public void display3(String text) {
-        TextView t = (TextView) findViewById(R.id.display_text_view_3);
-        t.setText(text);
-    }
 }
